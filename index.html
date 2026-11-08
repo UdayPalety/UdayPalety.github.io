@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uday Palety | Biomedical Engineer</title>
+<meta name="description" content="Portfolio of Udayaditya (Uday) Palety, biomedical engineer working across systems, R&amp;D, and manufacturing.">
+<meta property="og:title" content="Uday Palety | Biomedical Engineer">
+<meta property="og:description" content="Systems, R&amp;D, and manufacturing engineering portfolio.">
+<meta property="og:image" content="https://udaypalety.github.io/images/digigrip-in-hand.jpg">
+<meta property="og:url" content="https://udaypalety.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232346B0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EUP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F4F6F7;
+  --surface: #FFFFFF;
+  --ink: #17202B;
+  --slate: #56636F;
+  --rule: #D3DAE0;
+  --accent: #2346B0;
+  --accent-ink: #FFFFFF;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #12171D;
+    --surface: #1A2129;
+    --ink: #E6EAEE;
+    --slate: #9AA6B2;
+    --rule: #2E3843;
+    --accent: #8EA8FF;
+    --accent-ink: #0E1530;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.075rem/1.65 var(--serif);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+h1, h2, h3, h4 { font-family: var(--sans); line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 750; font-stretch: 112%; letter-spacing: -0.01em; }
+h3 { font-size: 1.4rem; font-weight: 700; font-stretch: 105%; }
+h4 { font-size: 1rem; font-weight: 700; margin-top: 1.6rem; }
+p { margin: 0.7rem 0 0; max-width: 68ch; }
+.meta { font-family: var(--sans); font-size: 0.92rem; color: var(--slate); margin-top: 0.35rem; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+.brand { font-family: var(--sans); font-weight: 750; font-stretch: 115%; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+.site-header nav { display: flex; gap: 22px; font-family: var(--sans); font-size: 0.95rem; }
+.site-header nav a { color: var(--ink); text-decoration: none; }
+.site-header nav a:hover { color: var(--accent); }
+@media (max-width: 640px) { .site-header nav a.hide-sm { display: none; } .site-header nav { gap: 16px; } }
+
+/* Hero */
+.hero { padding: 64px 0 56px; border-bottom: 1px solid var(--rule); }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+.hero h1 {
+  font-size: clamp(2.8rem, 7.4vw, 5.6rem);
+  font-weight: 800; font-stretch: 125%;
+  letter-spacing: -0.025em; line-height: 0.95;
+}
+.hero .role {
+  font-family: var(--sans); font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 500;
+  margin-top: 1.1rem; color: var(--ink);
+}
+.hero p.lead { font-size: 1.15rem; color: var(--slate); margin-top: 1.1rem; max-width: 46ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.8rem; }
+.btn {
+  font-family: var(--sans); font-weight: 600; font-size: 0.98rem;
+  padding: 11px 18px; border-radius: 4px; text-decoration: none;
+  border: 1.5px solid var(--accent); color: var(--accent); background: transparent;
+}
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn:hover { filter: brightness(1.08); }
+.hero-figure { margin: 0; position: relative; }
+.hero-figure img { border-radius: 4px; aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 36px; }
+  .hero { padding-top: 40px; }
+}
+
+/* Title-block captions: the one signature device, borrowed from engineering drawings */
+figcaption {
+  font-family: var(--sans); font-size: 0.85rem; color: var(--slate);
+  border: 1px solid var(--rule); border-top: none;
+  padding: 7px 10px; background: var(--surface);
+  display: flex; justify-content: space-between; gap: 12px;
+}
+figcaption .proj { color: var(--ink); font-weight: 600; white-space: nowrap; }
+
+/* Sections */
+section.block { padding: 72px 0; border-bottom: 1px solid var(--rule); }
+.section-intro { color: var(--slate); }
+
+/* Featured case study */
+.feature { margin-top: 36px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.feature-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.feature-head .text { padding: 36px; }
+.feature-head .award, .tag {
+  display: inline-block; font-family: var(--sans); font-size: 0.82rem; font-weight: 600;
+  color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 2px 8px; margin-top: 0.9rem;
+}
+.feature-head figure { margin: 0; border-left: 1px solid var(--rule); background: #fff; display: flex; flex-direction: column; justify-content: center; }
+.feature-head figure button { flex: 1; display: flex; align-items: center; }
+.feature-head figure figcaption { border: none; border-top: 1px solid var(--rule); }
+.feature-body { padding: 8px 36px 36px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px 48px; }
+.feature-body ul { margin: 0.6rem 0 0; padding-left: 1.2rem; }
+.feature-body li { margin: 0.35rem 0; }
+@media (max-width: 860px) {
+  .feature-head, .feature-body { grid-template-columns: minmax(0,1fr); }
+  .feature-head figure { border-left: none; border-top: 1px solid var(--rule); }
+  .feature-head .text, .feature-body { padding-left: 22px; padding-right: 22px; }
+}
+
+/* Spec table */
+.spec-wrap { overflow-x: auto; margin-top: 0.8rem; }
+table.spec { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 0.9rem; min-width: 420px; }
+table.spec th, table.spec td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.spec th { font-weight: 600; color: var(--slate); }
+table.spec td.pass { color: var(--accent); font-weight: 600; }
+.spec-note { font-size: 0.85rem; color: var(--slate); font-family: var(--sans); }
+
+/* Galleries */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; padding: 0 36px 36px; }
+@media (min-width: 1000px) { .gallery { grid-template-columns: repeat(5, minmax(0,1fr)); } }
+@media (max-width: 860px) { .gallery { padding: 0 22px 22px; } }
+.gallery figure, .project figure { margin: 0; }
+.zoom { all: unset; cursor: zoom-in; display: block; background: #fff; border: 1px solid var(--rule); width: 100%; box-sizing: border-box; }
+.zoom img { aspect-ratio: 4/3; object-fit: contain; width: 100%; }
+.zoom:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.feature-head .zoom { border: none; }
+.feature-head .zoom img { aspect-ratio: auto; }
+
+/* Other projects */
+.project { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; padding: 48px 0; border-top: 1px solid var(--rule); align-items: start; }
+.project:first-of-type { border-top: none; }
+.project .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.project .shots figure:first-child { grid-column: 1 / -1; }
+.project .shots figure:only-child { grid-column: 1 / -1; }
+.tools { font-family: var(--sans); font-size: 0.9rem; color: var(--slate); margin-top: 1rem; }
+@media (max-width: 860px) { .project { grid-template-columns: minmax(0,1fr); gap: 24px; } }
+
+/* Experience */
+.job { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--rule); }
+.job:first-of-type { margin-top: 28px; }
+.job .when { font-family: var(--sans); font-size: 0.95rem; color: var(--slate); padding-top: 3px; }
+.job h3 { font-size: 1.2rem; }
+.job .org { font-family: var(--sans); font-weight: 500; margin-top: 0.15rem; }
+.job ul { margin: 0.7rem 0 0; padding-left: 1.2rem; max-width: 72ch; }
+.job li { margin: 0.35rem 0; }
+@media (max-width: 700px) { .job { grid-template-columns: 1fr; gap: 6px; } }
+
+/* Skills and education */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; gap: 0; } }
+dl.skills { margin: 24px 0 0; }
+dl.skills dt { font-family: var(--sans); font-weight: 700; margin-top: 1.1rem; }
+dl.skills dd { margin: 0.25rem 0 0; }
+.edu { margin-top: 24px; }
+.edu div { margin-top: 1.1rem; }
+.edu strong { font-family: var(--sans); }
+
+/* Contact / footer */
+.contact { padding: 72px 0; }
+.contact p { font-size: 1.15rem; }
+footer { border-top: 1px solid var(--rule); padding: 22px 0 32px; font-family: var(--sans); font-size: 0.85rem; color: var(--slate); }
+
+/* Lightbox */
+dialog#viewer { border: none; padding: 0; max-width: min(1200px, 94vw); max-height: 92vh; background: var(--surface); color: var(--ink); border-radius: 6px; }
+dialog#viewer::backdrop { background: rgba(10, 14, 20, 0.82); }
+dialog#viewer img { max-height: calc(92vh - 56px); width: auto; margin: 0 auto; background: #fff; }
+dialog#viewer .bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 10px 14px; font-family: var(--sans); font-size: 0.9rem; }
+dialog#viewer button.close { font: 600 0.9rem var(--sans); background: none; border: 1px solid var(--rule); color: var(--ink); border-radius: 4px; padding: 6px 12px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Uday Palety</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills" class="hide-sm">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Uday<br>Palety</h1>
+        <p class="role">Biomedical Engineer: Systems, R&amp;D, Manufacturing</p>
+        <p class="lead">I design, build, and test hardware for medicine and the life sciences, from validating filling-line equipment in a cGMP plant to building measurement systems for genome sequencing. I’m currently pursuing an M.S. in Bioengineering at UC San Diego.</p>
+        <div class="actions">
+          <a class="btn primary" href="resume.pdf" download>Download resume</a>
+          <a class="btn" href="mailto:upalety@ucsd.edu">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/udayaditya-palety/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="images/digigrip-in-hand.jpg" alt="The DigiGrip digital hand dynamometer held in a hand, showing the aluminum grip bars, springs, and S-beam load cell" width="1600" height="1200">
+        <figcaption><span>Digital hand dynamometer, final prototype</span><span class="proj">DigiGrip</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="section-intro">Device design, prototyping, and verification work from school, internships, and design competitions. Select any image to enlarge it.</p>
+
+      <!-- Featured: DigiGrip -->
+      <article class="feature">
+        <div class="feature-head">
+          <div class="text">
+            <h3>DigiGrip: a digital hand dynamometer for stroke recovery</h3>
+            <p class="meta">Senior design, UC Davis Biomedical Engineering, Sept 2022 to June 2023. Team of five, for client Dr. Carolynn Patten.</p>
+            <p>About 795,000 people in the US have a stroke each year, and grip strength is one of the clearest measures of their recovery. The clinical standard, the JAMAR hydraulic dynamometer, uses an analog gauge that clinicians read and record by hand.</p>
+            <p>We built a digital replacement. An S-beam load cell sits between machined aluminum grip bars, a conditioning circuit amplifies and filters its signal, and an Arduino converts it to force, saves each patient’s readings to an SD card, and feeds a Python GUI that tracks patients over time.</p>
+          </div>
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-cad.jpg" data-caption="DigiGrip CAD model: half-round grip bars, compression springs, and S-beam load cell">
+              <img src="images/digigrip-cad.jpg" alt="SolidWorks model of the DigiGrip showing two half-round bars, two springs, and an S-shaped load cell" loading="lazy" width="1057" height="788">
+            </button>
+            <figcaption><span>SolidWorks assembly</span><span class="proj">DigiGrip</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="feature-body">
+          <div>
+            <h4>My contributions</h4>
+            <ul>
+              <li>Translated user-needs surveys into the Engineering Design Standards and performance metrics the device was tested against.</li>
+              <li>Machined 8+ aluminum components on a mill and drill press, working from GD&amp;T drawings and the bill of materials.</li>
+              <li>Built test fixtures and a NI myDAQ / LabVIEW data acquisition setup for component, sub-assembly, and full-system verification.</li>
+              <li>Ran validation testing against the JAMAR dynamometer in the client’s lab.</li>
+            </ul>
+            <h4>What I’d change next</h4>
+            <p>The springs we chose only gave mechanical feedback above about 70 lbf, too stiff for stroke patients, and validation against the JAMAR was limited by a hanging-weight setup that didn’t load our device cleanly. The next version would use lower-rate springs, a purpose-built validation fixture, a PCB in place of the breadboard, and battery power.</p>
+          </div>
+          <div>
+            <h4>Verification results</h4>
+            <div class="spec-wrap">
+              <table class="spec">
+                <thead><tr><th>Requirement</th><th>Target</th><th>Measured</th></tr></thead>
+                <tbody>
+                  <tr><td>Circuit gain, 0.5 to 10 Hz</td><td>43 dB ±10%</td><td class="pass">40.2 dB</td></tr>
+                  <tr><td>Low-pass cutoff</td><td>10.26 Hz ±10%</td><td class="pass">10.81 Hz</td></tr>
+                  <tr><td>Load cell linearity, 0 to 200 lbf</td><td>R² &gt; 0.98</td><td class="pass">R² &gt; 0.98</td></tr>
+                  <tr><td>Full assembly linearity</td><td>R² &gt; 0.98</td><td class="pass">R² &gt; 0.9999</td></tr>
+                  <tr><td>Hand-held unit weight</td><td>&lt; 3 lb</td><td class="pass">0.9 lb</td></tr>
+                  <tr><td>Prototype cost</td><td>&lt; $600</td><td class="pass">$535</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="spec-note">Load cell calibrated on a compression testing machine following ISO 376 considerations; circuit characterized with an experimental Bode plot.</p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-circuit.jpg" data-caption="Signal conditioning circuit on a breadboard: instrumentation amplifier and active low-pass filter">
+              <img src="images/digigrip-circuit.jpg" alt="Breadboard with the instrumentation amplifier, op-amp, resistors, and capacitors of the conditioning circuit" loading="lazy" width="625" height="893">
+            </button>
+            <figcaption><span>Conditioning circuit</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-bode.jpg" data-caption="Experimental Bode plot of the conditioning circuit, measured with the myDAQ function generator and oscilloscope">
+              <img src="images/digigrip-bode.jpg" alt="Gain in decibels versus frequency, flat near 40 dB and rolling off above about 10 Hz" loading="lazy" width="1200" height="742">
+            </button>
+            <figcaption><span>Bode plot</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-loadcell.jpg" data-caption="Load cell verification: output voltage versus applied load, ramping up and down from 0 to 200 lbf">
+              <img src="images/digigrip-loadcell.jpg" alt="Scatter plot of output voltage against applied load with linear regression lines for ramp up and ramp down" loading="lazy" width="592" height="305">
+            </button>
+            <figcaption><span>Load cell linearity</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-assembly-test.jpg" data-caption="Full hand-held assembly verification: output voltage versus applied load">
+              <img src="images/digigrip-assembly-test.jpg" alt="Linear plot of output voltage against applied load for the full dynamometer assembly" loading="lazy" width="561" height="335">
+            </button>
+            <figcaption><span>Assembly linearity</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-calipers.jpg" data-caption="Dimensional verification of a machined half-round bar with digital calipers">
+              <img src="images/digigrip-calipers.jpg" alt="Digital calipers measuring a machined aluminum half-round bar" loading="lazy" width="1430" height="1073">
+            </button>
+            <figcaption><span>Dimensional check</span></figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- HexCube -->
+      <article class="project" style="margin-top:24px">
+        <div class="shots">
+          <figure>
+            <button class="zoom" type="button" data-full="images/hexcube-prototype.jpg" data-caption="HexCube prototype holding a model skull’s jaw open with surgical tubing, built in under 8 hours">
+              <img src="images/hexcube-prototype.jpg" alt="Clear acrylic frame with hexagonal holes, yellow surgical tubing holding open the jaw of a 3D-printed animal skull" loading="lazy" width="1280" height="1160">
+            </button>
+            <figcaption><span>Prototype, built in under 8 hours</span><span class="proj">HexCube</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/hexcube-cad.jpg" data-caption="HexCube frame CAD model">
+              <img src="images/hexcube-cad.jpg" alt="CAD model of the HexCube frame with two perforated plates joined by curved supports" loading="lazy" width="1010" height="692">
+            </button>
+            <figcaption><span>Frame CAD</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/hexcube-drawing.jpg" data-caption="Dimensioned drawing of the 3D-printed anchor clip">
+              <img src="images/hexcube-drawing.jpg" alt="Engineering drawing of the anchor clip with dimensions in inches" loading="lazy" width="1101" height="788">
+            </button>
+            <figcaption><span>Anchor clip drawing</span></figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>HexCube: veterinary mouth gag</h3>
+          <p class="meta">BMES Make-a-Thon 2022, 48-hour medical device design competition</p>
+          <span class="tag">Most Creative Prototype award</span>
+          <p>The prompt was a device to hold an animal’s mouth open under general anesthesia during dental surgery. Our design sits outside the animal: a laser-cut acrylic frame full of hexagonal holes that anchor surgical tubing anywhere the clinician needs it, so one device fits jaws of any shape or size.</p>
+          <p>We designed for easy manufacturing, cutting the frame from a single acrylic sheet and 3D printing the anchor clips and pressure gauge in ABS. HexCube was one of 3 of 15 designs picked to prototype after day one.</p>
+          <p class="tools">SolidWorks, laser cutting, FDM 3D printing (ABS), DFM</p>
+        </div>
+      </article>
+
+      <!-- Tessellate -->
+      <article class="project">
+        <div class="shots">
+          <figure>
+            <button class="zoom" type="button" data-full="images/tessellate-cad.jpg" data-caption="Tessellate units clipped to the side of a NICU bed">
+              <img src="images/tessellate-cad.jpg" alt="CAD render of a NICU bed with small modular wire-management units clipped to its edge" loading="lazy" width="1600" height="910">
+            </button>
+            <figcaption><span>Modular units on a NICU bed</span><span class="proj">Tessellate</span></figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Tessellate: NICU wire management</h3>
+          <p class="meta">BMES Make-a-Thon 2023</p>
+          <span class="tag">Most Promising Design award</span>
+          <p>NICU babies are surrounded by monitoring and life-support lines that tangle into clumps in a small space, creating a hazard for both clinicians and infants. Tessellate is a set of modular units that clip onto the sides of the bed and connect to each other, so clinicians can route any number of wires in any direction.</p>
+          <p class="tools">SolidWorks, modular design, user-needs analysis</p>
+        </div>
+      </article>
+
+      <!-- LV Prasad -->
+      <article class="project">
+        <div class="shots">
+          <figure>
+            <button class="zoom" type="button" data-full="images/lvp-cnc.jpg" data-caption="High-precision CNC lathe cutting a custom contact lens from the generated point cloud">
+              <img src="images/lvp-cnc.jpg" alt="Inside a CNC machine enclosure cutting a contact lens" loading="lazy" width="1600" height="1200">
+            </button>
+            <figcaption><span>CNC lens cutting</span><span class="proj">LV Prasad Eye Institute</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/lvp-scan-lines.jpg" data-caption="Interpolated scan lines describing the lens radius and topography">
+              <img src="images/lvp-scan-lines.jpg" alt="Plot of several interpolated curves representing lens scan lines" loading="lazy" width="840" height="630">
+            </button>
+            <figcaption><span>Scan lines</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/lvp-point-cloud.jpg" data-caption="3D point cloud of the asymmetric lens surface generated in MATLAB">
+              <img src="images/lvp-point-cloud.jpg" alt="3D wireframe plot of a dome-shaped lens surface" loading="lazy" width="840" height="630">
+            </button>
+            <figcaption><span>Lens point cloud</span></figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Custom contact lens point cloud generation</h3>
+          <p class="meta">Project intern, LV Prasad Eye Institute, Dec 2020 to Mar 2021</p>
+          <p>The institute makes custom asymmetric contact lenses on a high-precision CNC machine that needs a dense 2D point cloud as input, but a clinician’s eye scan produces only a few dozen points.</p>
+          <p>I wrote a MATLAB program that interpolates those sparse scan lines, projects them into 3D, and combines them into a point cloud of 3,000+ points dense enough to cut a lens directly. I then ran the CNC to fabricate prototype lenses from the output.</p>
+          <p class="tools">MATLAB, spline interpolation, CNC machining</p>
+        </div>
+      </article>
+
+      <!-- Pulse oximeter -->
+      <article class="project">
+        <div class="shots">
+          <figure>
+            <button class="zoom" type="button" data-full="images/pulseox-device.jpg" data-caption="Assembled Bluetooth pulse oximeter: Arduino Uno, MAX30102 sensor, and HC-05 module">
+              <img src="images/pulseox-device.jpg" alt="Arduino and breadboard with a pulse oximeter sensor and Bluetooth module on a yellow base" loading="lazy" width="564" height="406">
+            </button>
+            <figcaption><span>Assembled device</span><span class="proj">Pulse oximeter</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/pulseox-wiring.jpg" data-caption="Fritzing wiring diagram">
+              <img src="images/pulseox-wiring.jpg" alt="Fritzing breadboard wiring diagram of the Arduino, sensor, and Bluetooth module" loading="lazy" width="724" height="470">
+            </button>
+            <figcaption><span>Wiring diagram</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/pulseox-phone.jpg" data-caption="Heart rate and SpO₂ readings received over Bluetooth on a phone">
+              <img src="images/pulseox-phone.jpg" alt="Phone screen showing a serial monitor with heart rate and SpO2 readings" loading="lazy" width="779" height="1600">
+            </button>
+            <figcaption><span>Phone readout</span></figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Bluetooth pulse oximeter</h3>
+          <p class="meta">Final project, microcontroller lab course</p>
+          <p>A wireless pulse oximeter built from an Arduino Uno R3, a MAX30102 optical sensor, and an HC-05 Bluetooth module. Firmware on the Arduino processes the raw sensor signal into heart rate and SpO₂ and streams the readings to a smartphone.</p>
+          <p class="tools">Arduino (C++), MAX30102, HC-05 Bluetooth, Fritzing</p>
+        </div>
+      </article>
+
+      <!-- Microscope -->
+      <article class="project">
+        <div class="shots">
+          <figure>
+            <button class="zoom" type="button" data-full="images/microscope.jpg" data-caption="Machined aluminum phone microscope with lathe-turned adjustment screws and drilled aperture plate">
+              <img src="images/microscope.jpg" alt="Machined aluminum microscope body with red and blue adjustment knobs and a perforated aperture plate" loading="lazy" width="1600" height="1200">
+            </button>
+            <figcaption><span>Finished part</span><span class="proj">Phone microscope</span></figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Machined phone microscope</h3>
+          <p class="meta">Manufacturing Techniques for Biomedical Engineering course</p>
+          <p>A simple microscope that magnifies through a phone camera, made using four machines. I milled the body from a single aluminum block, turned the working-distance adjustment screws on a lathe, drilled the multi-size aperture plate on a drill press, and laser-etched the center plate.</p>
+          <p class="tools">Mill, lathe, drill press, laser cutter</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="when">June to Aug 2026</div>
+        <div>
+          <h3>Engineering Intern, Systems Engineering</h3>
+          <div class="org">Ultima Genomics</div>
+          <ul>
+            <li>Engineered a custom interferometry-based thin-film measurement system integrating optics, 3D-printed hardware, and a Python GUI, collecting 1M+ wafer fluid-dynamics data points.</li>
+            <li>Led root-cause analysis on a new sequencing protocol using Ishikawa methodology across 20+ runs, documenting findings in Jira.</li>
+            <li>Formulated a surfactant-stabilized coating and developed a spin-coating recipe for uniform, wash-removable coatings on 200 mm silicon wafers.</li>
+            <li>Designed freeze-thaw stability experiments on reagent formulations to establish customer-facing SOPs.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Oct 2023 to July 2025</div>
+        <div>
+          <h3>Process Engineer</h3>
+          <div class="org">Exela Pharma Sciences</div>
+          <ul>
+            <li>Validated 7+ pieces of packaging and filling line equipment (IQ/OQ/PQ), working with outside vendors on purchasing and site acceptance tests and writing the supporting SOPs.</li>
+            <li>Designed and fabricated custom fixtures and apparatus in SolidWorks and Onshape with GD&amp;T, improving OEE in the aseptic filling suite and cutting downtime by 20%.</li>
+            <li>Investigated deviations, executed CAPAs, and served as primary engineer on 10+ change controls in a cGMP environment, including a Class A aseptic cleanroom.</li>
+            <li>Supported production line scaling and the relocation and revalidation of GMP equipment, and trained operators on new equipment.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">June 2022 to June 2023</div>
+        <div>
+          <h3>Undergraduate Researcher</h3>
+          <div class="org">UC Davis Cardiac Signaling Lab, Department of Pharmacology</div>
+          <ul>
+            <li>Built an automated microscope assembly line around an Arduino microcontroller for high-throughput sample processing.</li>
+            <li>Prototyped imaging apparatus with SolidWorks CAD and 3D printing to study cytotoxic drug effects on cardiomyocytes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Dec 2020 to Mar 2021</div>
+        <div>
+          <h3>Project Intern</h3>
+          <div class="org">LV Prasad Eye Institute</div>
+          <ul>
+            <li>Developed a MATLAB program that generates CNC-ready contact lens point clouds from sparse clinician scan data, and fabricated lens prototypes on a high-precision CNC machine.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Sept 2020 to June 2022</div>
+        <div>
+          <h3>Undergraduate Researcher</h3>
+          <div class="org">UC Davis Siegel Lab</div>
+          <ul>
+            <li>Designed stabilizing mutations of the beta-glucosidase enzyme in Foldit and produced mutants by electroporating gene-edited plasmids into E. coli, verifying constructs by sequencing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap two-col">
+      <div>
+        <h2>Skills</h2>
+        <dl class="skills">
+          <dt>Design and fabrication</dt>
+          <dd>SolidWorks, Onshape, GD&amp;T, DFMA, milling, lathe, CNC, laser cutting, 3D printing</dd>
+          <dt>Validation and quality</dt>
+          <dd>IQ/OQ/PQ, site acceptance testing, CAPA, deviations, change control, cGMP, cleanroom operations, ISO 14971, SOP writing</dd>
+          <dt>Instrumentation and test</dt>
+          <dd>Load cells, signal conditioning circuits, NI myDAQ and LabVIEW, Arduino, optical measurement, test fixture design</dd>
+          <dt>Software and analysis</dt>
+          <dd>Python, MATLAB, statistical analysis, Excel, Jira, Confluence</dd>
+        </dl>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <div class="edu">
+          <div><strong>M.S. Bioengineering</strong><br>UC San Diego, in progress</div>
+          <div><strong>B.S. Biomedical Engineering</strong><br>UC Davis, 2023</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>I’m looking for full-time roles in systems, R&amp;D, and manufacturing engineering. The fastest way to reach me is <a href="mailto:upalety@ucsd.edu">upalety@ucsd.edu</a>, or connect with me on <a href="https://www.linkedin.com/in/udayaditya-palety/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      <div class="actions">
+        <a class="btn primary" href="resume.pdf" download>Download resume</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Udayaditya Palety, <span id="yr">2026</span></div>
+</footer>
+
+<dialog id="viewer" aria-label="Enlarged image">
+  <div class="bar"><span id="viewer-cap"></span><button class="close" type="button" autofocus>Close</button></div>
+  <img id="viewer-img" alt="">
+</dialog>
+
+<script>
+(function () {
+  var dlg = document.getElementById('viewer');
+  var img = document.getElementById('viewer-img');
+  var cap = document.getElementById('viewer-cap');
+  document.querySelectorAll('.zoom').forEach(function (b) {
+    b.addEventListener('click', function () {
+      img.src = b.dataset.full;
+      img.alt = b.querySelector('img').alt;
+      cap.textContent = b.dataset.caption || '';
+      if (dlg.showModal) dlg.showModal(); else window.open(b.dataset.full, '_blank');
+    });
+  });
+  dlg.querySelector('.close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
