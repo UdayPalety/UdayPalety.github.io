@@ -7,7 +7,7 @@
 <meta name="description" content="Portfolio of Udayaditya (Uday) Palety, biomedical engineer working across systems, R&amp;D, and manufacturing.">
 <meta property="og:title" content="Uday Palety | Biomedical Engineer">
 <meta property="og:description" content="Systems, R&amp;D, and manufacturing engineering portfolio.">
-<meta property="og:image" content="https://udaypalety.github.io/images/digigrip-in-hand.jpg">
+<meta property="og:image" content="https://udaypalety.github.io/images/uday-palety.jpg">
 <meta property="og:url" content="https://udaypalety.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232346B0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EUP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,12 +94,20 @@ p { margin: 0.7rem 0 0; max-width: 68ch; }
 }
 .btn.primary { background: var(--accent); color: var(--accent-ink); }
 .btn:hover { filter: brightness(1.08); }
-.hero-figure { margin: 0; position: relative; }
-.hero-figure img { border-radius: 4px; aspect-ratio: 4/3; object-fit: cover; width: 100%; }
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 36px; }
   .hero { padding-top: 40px; }
 }
+
+.portrait { width: 100%; max-width: 400px; justify-self: end; aspect-ratio: 1/1; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); }
+@media (max-width: 860px) { .portrait { justify-self: start; max-width: 320px; } }
+
+/* Contact band, directly under the hero */
+.contact-band { background: var(--surface); border-bottom: 1px solid var(--rule); padding: 36px 0; }
+.contact-band .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; }
+.contact-band h2 { font-size: 1.5rem; }
+.contact-band p { margin-top: 0.35rem; color: var(--slate); }
+.contact-band .actions { margin-top: 0; }
 
 /* Title-block captions: the one signature device, borrowed from engineering drawings */
 figcaption {
@@ -114,48 +122,16 @@ figcaption .proj { color: var(--ink); font-weight: 600; white-space: nowrap; }
 section.block { padding: 72px 0; border-bottom: 1px solid var(--rule); }
 .section-intro { color: var(--slate); }
 
-/* Featured case study */
-.feature { margin-top: 36px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
-.feature-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
-.feature-head .text { padding: 36px; }
-.feature-head .award, .tag {
-  display: inline-block; font-family: var(--sans); font-size: 0.82rem; font-weight: 600;
-  color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 2px 8px; margin-top: 0.9rem;
-}
-.feature-head figure { margin: 0; border-left: 1px solid var(--rule); background: #fff; display: flex; flex-direction: column; justify-content: center; }
-.feature-head figure button { flex: 1; display: flex; align-items: center; }
-.feature-head figure figcaption { border: none; border-top: 1px solid var(--rule); }
-.feature-body { padding: 8px 36px 36px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px 48px; }
-.feature-body ul { margin: 0.6rem 0 0; padding-left: 1.2rem; }
-.feature-body li { margin: 0.35rem 0; }
-@media (max-width: 860px) {
-  .feature-head, .feature-body { grid-template-columns: minmax(0,1fr); }
-  .feature-head figure { border-left: none; border-top: 1px solid var(--rule); }
-  .feature-head .text, .feature-body { padding-left: 22px; padding-right: 22px; }
-}
-
-/* Spec table */
-.spec-wrap { overflow-x: auto; margin-top: 0.8rem; }
-table.spec { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 0.9rem; min-width: 420px; }
-table.spec th, table.spec td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-table.spec th { font-weight: 600; color: var(--slate); }
-table.spec td.pass { color: var(--accent); font-weight: 600; }
-.spec-note { font-size: 0.85rem; color: var(--slate); font-family: var(--sans); }
-
-/* Galleries */
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; padding: 0 36px 36px; }
-@media (min-width: 1000px) { .gallery { grid-template-columns: repeat(5, minmax(0,1fr)); } }
-@media (max-width: 860px) { .gallery { padding: 0 22px 22px; } }
-.gallery figure, .project figure { margin: 0; }
+/* Projects */
+.project figure { margin: 0; }
 .zoom { all: unset; cursor: zoom-in; display: block; background: #fff; border: 1px solid var(--rule); width: 100%; box-sizing: border-box; }
 .zoom img { aspect-ratio: 4/3; object-fit: contain; width: 100%; }
 .zoom:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.feature-head .zoom { border: none; }
-.feature-head .zoom img { aspect-ratio: auto; }
-
-/* Other projects */
-.project { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; padding: 48px 0; border-top: 1px solid var(--rule); align-items: start; }
-.project:first-of-type { border-top: none; }
+.tag { display: inline-block; font-family: var(--sans); font-size: 0.82rem; font-weight: 600; color: var(--accent); border: 1px solid currentColor; border-radius: 3px; padding: 2px 8px; margin-top: 0.9rem; }
+.project ul { margin: 0.7rem 0 0; padding-left: 1.2rem; max-width: 68ch; }
+.project li { margin: 0.35rem 0; }
+.project { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,6fr); gap: 40px; padding: 48px 0; border-top: 1px solid var(--rule); align-items: start; }
+.project:first-of-type { border-top: none; margin-top: 12px; }
 .project .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .project .shots figure:first-child { grid-column: 1 / -1; }
 .project .shots figure:only-child { grid-column: 1 / -1; }
@@ -182,6 +158,7 @@ dl.skills dd { margin: 0.25rem 0 0; }
 .edu div { margin-top: 1.1rem; }
 .edu strong { font-family: var(--sans); }
 
+/* Footer */
 /* Contact / footer */
 .contact { padding: 72px 0; }
 .contact p { font-size: 1.15rem; }
@@ -201,10 +178,10 @@ dialog#viewer button.close { font: 600 0.9rem var(--sans); background: none; bor
   <div class="wrap">
     <a class="brand" href="#top">Uday Palety</a>
     <nav aria-label="Main">
+      <a href="#contact">Contact</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills" class="hide-sm">Skills</a>
-      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -217,16 +194,22 @@ dialog#viewer button.close { font: 600 0.9rem var(--sans); background: none; bor
         <h1>Uday<br>Palety</h1>
         <p class="role">Biomedical Engineer: Systems, R&amp;D, Manufacturing</p>
         <p class="lead">I design, build, and test hardware for medicine and the life sciences, from validating filling-line equipment in a cGMP plant to building measurement systems for genome sequencing. I’m currently pursuing an M.S. in Bioengineering at UC San Diego.</p>
-        <div class="actions">
-          <a class="btn primary" href="resume.pdf" download>Download resume</a>
-          <a class="btn" href="mailto:upalety@ucsd.edu">Email me</a>
-          <a class="btn" href="https://www.linkedin.com/in/udayaditya-palety/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
       </div>
-      <figure class="hero-figure">
-        <img src="images/digigrip-in-hand.jpg" alt="The DigiGrip digital hand dynamometer held in a hand, showing the aluminum grip bars, springs, and S-beam load cell" width="1600" height="1200">
-        <figcaption><span>Digital hand dynamometer, final prototype</span><span class="proj">DigiGrip</span></figcaption>
-      </figure>
+      <img class="portrait" src="images/uday-palety.jpg" alt="Uday Palety in a white shirt, tie, and UC Davis graduation stole" width="450" height="450">
+    </div>
+  </section>
+
+  <section class="contact-band" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Get in touch</h2>
+        <p>I’m looking for full-time roles in systems, R&amp;D, and manufacturing engineering.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:upalety@ucsd.edu">upalety@ucsd.edu</a>
+        <a class="btn" href="https://www.linkedin.com/in/udayaditya-palety/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="resume.pdf" download>Download resume</a>
+      </div>
     </div>
   </section>
 
@@ -235,90 +218,43 @@ dialog#viewer button.close { font: 600 0.9rem var(--sans); background: none; bor
       <h2>Projects</h2>
       <p class="section-intro">Device design, prototyping, and verification work from school, internships, and design competitions. Select any image to enlarge it.</p>
 
-      <!-- Featured: DigiGrip -->
-      <article class="feature">
-        <div class="feature-head">
-          <div class="text">
-            <h3>DigiGrip: a digital hand dynamometer for stroke recovery</h3>
-            <p class="meta">Senior design, UC Davis Biomedical Engineering, Sept 2022 to June 2023. Team of five, for client Dr. Carolynn Patten.</p>
-            <p>About 795,000 people in the US have a stroke each year, and grip strength is one of the clearest measures of their recovery. The clinical standard, the JAMAR hydraulic dynamometer, uses an analog gauge that clinicians read and record by hand.</p>
-            <p>We built a digital replacement. An S-beam load cell sits between machined aluminum grip bars, a conditioning circuit amplifies and filters its signal, and an Arduino converts it to force, saves each patient’s readings to an SD card, and feeds a Python GUI that tracks patients over time.</p>
-          </div>
+      <!-- DigiGrip -->
+      <article class="project">
+        <div class="shots">
           <figure>
-            <button class="zoom" type="button" data-full="images/digigrip-cad.jpg" data-caption="DigiGrip CAD model: half-round grip bars, compression springs, and S-beam load cell">
+            <button class="zoom" type="button" data-full="images/digigrip-in-hand.jpg" data-caption="DigiGrip final prototype: aluminum grip bars, springs, and S-beam load cell">
+              <img src="images/digigrip-in-hand.jpg" alt="The DigiGrip digital hand dynamometer held in a hand" loading="lazy" width="1600" height="1200">
+            </button>
+            <figcaption><span>Final prototype</span><span class="proj">DigiGrip</span></figcaption>
+          </figure>
+          <figure>
+            <button class="zoom" type="button" data-full="images/digigrip-cad.jpg" data-caption="DigiGrip SolidWorks assembly">
               <img src="images/digigrip-cad.jpg" alt="SolidWorks model of the DigiGrip showing two half-round bars, two springs, and an S-shaped load cell" loading="lazy" width="1057" height="788">
             </button>
-            <figcaption><span>SolidWorks assembly</span><span class="proj">DigiGrip</span></figcaption>
+            <figcaption><span>SolidWorks assembly</span></figcaption>
           </figure>
-        </div>
-
-        <div class="feature-body">
-          <div>
-            <h4>My contributions</h4>
-            <ul>
-              <li>Translated user-needs surveys into the Engineering Design Standards and performance metrics the device was tested against.</li>
-              <li>Machined 8+ aluminum components on a mill and drill press, working from GD&amp;T drawings and the bill of materials.</li>
-              <li>Built test fixtures and a NI myDAQ / LabVIEW data acquisition setup for component, sub-assembly, and full-system verification.</li>
-              <li>Ran validation testing against the JAMAR dynamometer in the client’s lab.</li>
-            </ul>
-            <h4>What I’d change next</h4>
-            <p>The springs we chose only gave mechanical feedback above about 70 lbf, too stiff for stroke patients, and validation against the JAMAR was limited by a hanging-weight setup that didn’t load our device cleanly. The next version would use lower-rate springs, a purpose-built validation fixture, a PCB in place of the breadboard, and battery power.</p>
-          </div>
-          <div>
-            <h4>Verification results</h4>
-            <div class="spec-wrap">
-              <table class="spec">
-                <thead><tr><th>Requirement</th><th>Target</th><th>Measured</th></tr></thead>
-                <tbody>
-                  <tr><td>Circuit gain, 0.5 to 10 Hz</td><td>43 dB ±10%</td><td class="pass">40.2 dB</td></tr>
-                  <tr><td>Low-pass cutoff</td><td>10.26 Hz ±10%</td><td class="pass">10.81 Hz</td></tr>
-                  <tr><td>Load cell linearity, 0 to 200 lbf</td><td>R² &gt; 0.98</td><td class="pass">R² &gt; 0.98</td></tr>
-                  <tr><td>Full assembly linearity</td><td>R² &gt; 0.98</td><td class="pass">R² &gt; 0.9999</td></tr>
-                  <tr><td>Hand-held unit weight</td><td>&lt; 3 lb</td><td class="pass">0.9 lb</td></tr>
-                  <tr><td>Prototype cost</td><td>&lt; $600</td><td class="pass">$535</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="spec-note">Load cell calibrated on a compression testing machine following ISO 376 considerations; circuit characterized with an experimental Bode plot.</p>
-          </div>
-        </div>
-
-        <div class="gallery">
           <figure>
-            <button class="zoom" type="button" data-full="images/digigrip-circuit.jpg" data-caption="Signal conditioning circuit on a breadboard: instrumentation amplifier and active low-pass filter">
-              <img src="images/digigrip-circuit.jpg" alt="Breadboard with the instrumentation amplifier, op-amp, resistors, and capacitors of the conditioning circuit" loading="lazy" width="625" height="893">
+            <button class="zoom" type="button" data-full="images/digigrip-circuit.jpg" data-caption="Signal conditioning circuit: instrumentation amplifier and active low-pass filter">
+              <img src="images/digigrip-circuit.jpg" alt="Breadboard with the conditioning circuit's amplifiers, resistors, and capacitors" loading="lazy" width="625" height="893">
             </button>
             <figcaption><span>Conditioning circuit</span></figcaption>
           </figure>
-          <figure>
-            <button class="zoom" type="button" data-full="images/digigrip-bode.jpg" data-caption="Experimental Bode plot of the conditioning circuit, measured with the myDAQ function generator and oscilloscope">
-              <img src="images/digigrip-bode.jpg" alt="Gain in decibels versus frequency, flat near 40 dB and rolling off above about 10 Hz" loading="lazy" width="1200" height="742">
-            </button>
-            <figcaption><span>Bode plot</span></figcaption>
-          </figure>
-          <figure>
-            <button class="zoom" type="button" data-full="images/digigrip-loadcell.jpg" data-caption="Load cell verification: output voltage versus applied load, ramping up and down from 0 to 200 lbf">
-              <img src="images/digigrip-loadcell.jpg" alt="Scatter plot of output voltage against applied load with linear regression lines for ramp up and ramp down" loading="lazy" width="592" height="305">
-            </button>
-            <figcaption><span>Load cell linearity</span></figcaption>
-          </figure>
-          <figure>
-            <button class="zoom" type="button" data-full="images/digigrip-assembly-test.jpg" data-caption="Full hand-held assembly verification: output voltage versus applied load">
-              <img src="images/digigrip-assembly-test.jpg" alt="Linear plot of output voltage against applied load for the full dynamometer assembly" loading="lazy" width="561" height="335">
-            </button>
-            <figcaption><span>Assembly linearity</span></figcaption>
-          </figure>
-          <figure>
-            <button class="zoom" type="button" data-full="images/digigrip-calipers.jpg" data-caption="Dimensional verification of a machined half-round bar with digital calipers">
-              <img src="images/digigrip-calipers.jpg" alt="Digital calipers measuring a machined aluminum half-round bar" loading="lazy" width="1430" height="1073">
-            </button>
-            <figcaption><span>Dimensional check</span></figcaption>
-          </figure>
+        </div>
+        <div>
+          <h3>DigiGrip: digital hand dynamometer for stroke recovery</h3>
+          <p class="meta">Senior design, UC Davis Biomedical Engineering, 2022 to 2023, for client Dr. Carolynn Patten</p>
+          <p>A digital replacement for the analog JAMAR dynamometer clinicians use to track grip strength after a stroke. A load cell between machined aluminum grip bars feeds a conditioning circuit and an Arduino, which saves each patient’s readings for a Python app that tracks recovery over time.</p>
+          <ul>
+            <li>Turned user-needs surveys into the design standards the device was tested against.</li>
+            <li>Machined 8+ aluminum components and built the test fixtures and data acquisition setup for verification.</li>
+            <li>Verified linear output from 0 to 200 lbf (R² &gt; 0.9999) in a 0.9 lb hand-held unit, at a $535 prototype cost.</li>
+          </ul>
+          <p class="tools">SolidWorks, milling, signal conditioning, Arduino, NI myDAQ and LabVIEW, Python</p>
         </div>
       </article>
 
       <!-- HexCube -->
-      <article class="project" style="margin-top:24px">
+      <article class="project">
         <div class="shots">
           <figure>
             <button class="zoom" type="button" data-full="images/hexcube-prototype.jpg" data-caption="HexCube prototype holding a model skull’s jaw open with surgical tubing, built in under 8 hours">
@@ -542,15 +478,6 @@ dialog#viewer button.close { font: 600 0.9rem var(--sans); background: none; bor
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <h2>Get in touch</h2>
-      <p>I’m looking for full-time roles in systems, R&amp;D, and manufacturing engineering. The fastest way to reach me is <a href="mailto:upalety@ucsd.edu">upalety@ucsd.edu</a>, or connect with me on <a href="https://www.linkedin.com/in/udayaditya-palety/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-      <div class="actions">
-        <a class="btn primary" href="resume.pdf" download>Download resume</a>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
